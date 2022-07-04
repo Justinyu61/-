@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/loginPage.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="blueBg">
+                <div class="box signin">
+                    <h2>已是會員?</h2>
+                    <button class="signinBtn">登入</button>
+                </div>
+                <div class="box signup">
+                    <h2>尚未加入會員?</h2>
+                    <button class="signupBtn">註冊</button>
+                </div>
+            </div>
+            <div class="formBx">
+                <div class="form signinForm">
+                    <form action="">
+                        <h3>登入</h3>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="password">
+                        <input type="submit" value="Login">
+                        <a href="#" class="forget">忘記密碼?</a>
+                    </form>
+                </div>
+                <div class="form signupForm">
+                    <form action="">
+                        <h3>註冊</h3>
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Email Address">
+                        <input type="password" placeholder="password">
+                        <input type="password" placeholder="Config password">
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            const signinBtn = document.querySelector('.signinBtn');
+            const signupBtn = document.querySelector('.signupBtn');
+            const formBx = document.querySelector('.formBx');
+            const body = document.querySelector('body');
+
+            signinBtn.onclick = function () {
+                formBx.classList.remove('active');
+                body.classList.remove('active');
+            }
+            signupBtn.onclick = function () {
+                formBx.classList.add('active');
+                body.classList.add('active');
+            }
+        </script>
+    </body>
+</html>
